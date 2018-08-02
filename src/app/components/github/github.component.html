@@ -6,9 +6,9 @@
 </div>
 <div *ngFor="let user of users" class="media">
   <div class="media-left">
-    <a href="{{ user.html_url }}">
-      <img class="media-object img" src="{{ user.avatar_url }}" alt="...">
-    </a>
+      <a [routerLink]="['user',user.login, user.score]">
+          <img class="media-object img" src="{{ user.avatar_url }}" alt="...">
+      </a>
   </div>
   <div class="media-body">
     <h4 class="media-heading">{{ user.login }}</h4>

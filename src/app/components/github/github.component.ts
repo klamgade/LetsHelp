@@ -17,22 +17,9 @@ export class GithubComponent implements OnInit {
   title = 'app';
   isLoading: boolean = false;
   users: any = [];
-  UserForm: FormGroup;
   searchControl = new FormControl();
-  UserImageFile: File;
-  rating = 0;
-  @ViewChild('UserImage') User_Image;
-  password() {
-    this.UserForm.get('password');
-  }
 
   constructor(private fb: FormBuilder, private formService: FormsSubmit, private _gitHubService: Github) {
-    this.UserForm = fb.group({
-      'Email': ['', Validators.required],
-      'password': ['', Validators.compose([CustomValidatorsComponent.cannotContainDollarSign])],
-      'UserImage': ['', Validators.required]
-    });
-    console.log("password validation", );
   }
 
   ngOnInit() {
@@ -49,27 +36,5 @@ export class GithubComponent implements OnInit {
           console.log("data received:", data);
         });
       });           
-  }
-
-  OnSubmit(value) {
-    console.log("user form values: ", this.UserForm.value);
-    const Image = this.User_Image.nativeElement;
-    if (Image.files && Image.files[0]) {
-      this.UserImageFile = Image.files[0];
-    }
-    const ImageFile: File = this.UserImageFile;
-    const formData: FormData = new FormData();
-    formData.append('Email', value.Email);
-    formData.append('Password', value.Password);
-    formData.append('UserImage', ImageFile, ImageFile.name);
-
-    this.formService.submitData(formData).subscribe(
-      data => {
-        console.log("data", data);
-      });
-  }
-
-  onFileChange(event) {
-    event.target.value = "";
   }
 }

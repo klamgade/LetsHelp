@@ -20,6 +20,8 @@ import { NotFoundComponent } from 'src/app/components/not-found/not-found.compon
 import { GithubComponent } from 'src/app/components/github/github.component';
 import { routing } from 'src/app/app.routing';
 import { LoginComponent } from './components/login/login.component';
+import { ContactComponent } from './contact/contact.component';
+import { GitHubUserComponent } from './git-hub-user/git-hub-user.component';
 
 
 const appRoutes: Routes = [
@@ -43,7 +45,9 @@ const appRoutes: Routes = [
     NotFoundComponent,
     GithubComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ContactComponent,
+    GitHubUserComponent
   ],
   imports: [
     BrowserModule,
