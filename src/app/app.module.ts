@@ -1,34 +1,60 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { JokeComponent } from './joke/joke.component';
-import { JokeListComponent } from './joke-list/joke-list.component';
+import { AppComponent } from './components/app/app.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { HeroParentComponent } from 'src/app/components/hero-parent/hero-parent.component';
+import { TestComponent } from 'src/app/components/test/test.component';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { HeroChildComponent } from 'src/app/share/components/hero-child/hero-child.component';
+import { HeroGrandParentComponent } from 'src/app/components/hero-grand-parent/hero-grand-parent.component';
+import { FormsSubmit } from '../service/forms-submit.service';
+import { HttpModule } from '@angular/http';
+import { RatingComponent } from './share/components/rating/rating.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductsComponent } from './components/products/products.component';
+import { CustomValidatorsComponent } from './components/custom-validators/custom-validators.component';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { FileUploadComponent } from 'src/app/components/file-upload/file-upload.component';
+import { NotFoundComponent } from 'src/app/components/not-found/not-found.component';
+import { GithubComponent } from 'src/app/components/github/github.component';
+import { routing } from 'src/app/app.routing';
+import { LoginComponent } from './components/login/login.component';
+
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'joke', component: JokeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'heroParent', component: HeroParentComponent },
+  { path:  'app-file-upload', component: FileUploadComponent },
+ 
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    TestComponent,
+    HeroChildComponent,
+    HeroParentComponent,
+    HeroGrandParentComponent,
+    FileUploadComponent,
+    RatingComponent,
+    ProductComponent,
+    ProductsComponent,
+    CustomValidatorsComponent,
+    NotFoundComponent,
+    GithubComponent,
     HomeComponent,
-    EmployeesComponent,
-    PageNotFoundComponent,
-    JokeComponent,
-    JokeListComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    HttpModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
+    routing
   ],
-  providers: [],
+  providers: [FormsSubmit],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

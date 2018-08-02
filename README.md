@@ -1,6 +1,14 @@
 # LetsHelp
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+
+# To run
+- Once the project is cloned or downloaded, in command terminal, once the path is changed to the project location, 
+    1. Run command [npm install], for getting all the dependencies required
+    2. Run command [npm install rxjs@6 rxjs-compat@6 --save], to align the version of rxjs in the current project with              angular-v6
+
+
+
+
 
 ## Development server
 
