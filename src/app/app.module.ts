@@ -8,12 +8,18 @@ import { TestComponent } from 'src/app/components/test/test.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HeroChildComponent } from 'src/app/share/components/hero-child/hero-child.component';
 import { HeroGrandParentComponent } from 'src/app/components/hero-grand-parent/hero-grand-parent.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
 import { FormsSubmit } from '../service/forms-submit.service';
 import { HttpModule } from '@angular/http';
 import { RatingComponent } from './share/components/rating/rating.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
+import { CustomValidatorsComponent } from './components/custom-validators/custom-validators.component';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { FileUploadComponent } from 'src/app/components/file-upload/file-upload.component';
+import { NotFoundComponent } from 'src/app/components/not-found/not-found.component';
+import { GithubComponent } from 'src/app/components/github/github.component';
+import { routing } from 'src/app/app.routing';
+import { LoginComponent } from './components/login/login.component';
 
 
 const appRoutes: Routes = [
@@ -25,7 +31,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     TestComponent,
     HeroChildComponent,
     HeroParentComponent,
@@ -33,15 +38,21 @@ const appRoutes: Routes = [
     FileUploadComponent,
     RatingComponent,
     ProductComponent,
-    ProductsComponent
+    ProductsComponent,
+    CustomValidatorsComponent,
+    NotFoundComponent,
+    GithubComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
- 
+    routing
   ],
   providers: [FormsSubmit],
   bootstrap: [AppComponent]

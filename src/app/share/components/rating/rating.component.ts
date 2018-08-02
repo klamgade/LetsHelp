@@ -9,6 +9,7 @@ export class RatingComponent implements OnInit {
 
   @Input('rating-value') rating = 0; 
   @Input() numOfReviews = 0;
+  isFavorite: true;
 
   
   constructor() { 
@@ -20,6 +21,10 @@ export class RatingComponent implements OnInit {
     this.rating = ratingValue; 
     
     console.log("currnet rating value", this.rating);
+    }
+
+    showReviewsNumber(event){
+
     }
 
   ngOnInit() {

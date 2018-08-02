@@ -15,7 +15,6 @@ export class ProductsComponent implements OnInit {
   
   constructor(productService: ProductService)
   { 
-    debugger;
     this.products = productService.getProducts(); 
     console.log("this.products", this.products);
   }

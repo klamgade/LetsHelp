@@ -8,9 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   @Input() data: any;
-  
+
   constructor() { 
-    debugger;
     console.log("data", this.data);
   }
 

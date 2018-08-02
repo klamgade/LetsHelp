@@ -1,21 +1,25 @@
 <div class="media">
     <div class="media-left">
         <a href="#">
-        <img class="media-object" src="{{ data.imageUrl }}">
+            <img class="media-object" src="{{ data.imageUrl }}">
         </a>
     </div>
     <div class="media-body">
-        <h4 class="media-heading"> {{ data.productName }}   </h4>                
-        {{ data.releasedDate }} 
+        <h4 class="media-heading"> {{ data.productName }} </h4>
+        {{ data.releasedDate }}
 
-<!-- child component: RatingComponent-->
-        <app-rating 
-            [rating-value]="data.rating" 
-            [numOfReviews]="data.numOfReviews">
+        <!-- child component: RatingComponent-->
+        <app-rating [rating-value]="data.rating" [numOfReviews]="data.numOfReviews">
         </app-rating>
-        <br>     
-               
+        <br>
+        <div [ngSwitch]="data.rating">
+            <div *ngSwitchCase="1">Poor</div>
+            <div *ngSwitchCase="2">Fair</div>
+            <div *ngSwitchCase="3">Good</div>
+            <div *ngSwitchCase="4">Very Good</div>
+            <div *ngSwitchCase="5">Excellent</div>
+            <div *ngSwitchDefault>Not Rated</div> ​
+        </div>
         {{ data.description }}
     </div>
-</div>    
-  
+</div>

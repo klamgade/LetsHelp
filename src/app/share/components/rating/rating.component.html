@@ -32,5 +32,8 @@ class="glyphicon"
 [class.glyphicon-star]="rating >= 5"     
 (click)="onClick(5)"      
 >                    
-</i>    
+</i>  
+<br>
+
+<input type="checkbox" name="vehicle"  value='test' (change)="showReviewsNumber($event)">Show Number of Reviews<br>
 {{numOfReviews}}

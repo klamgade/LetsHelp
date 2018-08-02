@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { FormsSubmit } from '../../../service/forms-submit.service';
 import { CustomValidatorsComponent } from '../custom-validators/custom-validators.component';
@@ -8,12 +8,12 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import { Github } from 'src/service/github.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [Github]
+  selector: 'app-github',
+  templateUrl: './github.component.html',
+  styleUrls: ['./github.component.css']
 })
-export class AppComponent implements OnInit {
+export class GithubComponent implements OnInit {
+
   title = 'app';
   isLoading: boolean = false;
   users: any = [];
