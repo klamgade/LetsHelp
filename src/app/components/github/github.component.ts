@@ -1,16 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { FormsSubmit } from '../../../service/forms-submit.service';
-import { CustomValidatorsComponent } from '../custom-validators/custom-validators.component';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { Github } from 'src/service/github.service';
+import { AuthGuard } from '../../../service/auth-guard.service';
+
 
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
-  styleUrls: ['./github.component.css']
+  styleUrls: ['./github.component.css'],
+  providers:[AuthGuard]
 })
 export class GithubComponent implements OnInit {
 

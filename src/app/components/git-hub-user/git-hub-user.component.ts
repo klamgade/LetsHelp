@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ActivatedRoute } from '../../../../node_modules/@angular/router';
+
 
 @Component({
   selector: 'app-git-hub-user',

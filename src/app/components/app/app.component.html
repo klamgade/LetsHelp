@@ -12,19 +12,25 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="github" routerLinkActive="active">GitHub</a>
             </li>
+         
             <li class="nav-item">
-                <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
-            </li>
+              <a class="nav-link" routerLink="products" routerLinkActive="active">Products</a>
+          </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact</a>
           </li>
       </ul>
-      <form class="navbar-form navbar-left" action="/action_page.php">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" name="search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+
+          <button routerLink="login" routerLinkActive="active" class="btn btn-default" style="margin-left: 490px; margin-top:10px">Login</button>
+
+      <div style="float: right;"> 
+        <form class="navbar-form navbar-left" action="/action_page.php">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
     </div>
   </nav>
 

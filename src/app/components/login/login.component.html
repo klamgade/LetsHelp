@@ -1,28 +1,21 @@
-<!-- login form section-->
-    <form [formGroup]="UserForm" id="UserForm" (ngSubmit)="OnSubmit(UserForm.value)">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="Email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
-              <div *ngIf="UserForm.controls.password.touched && UserForm.controls.password.errors"> ​​
-                <div *ngIf="UserForm.controls.password.errors.required" class="alert alert-danger"> Password is required. </div> ​
-                <div *ngIf="UserForm.controls.password.errors.cannotContainDollarSign" class="alert alert-danger"> Password cannot dollar sign. </div>
-              </div>
-            </div>
+<form [formGroup]="userForm" id="UserForm" (ngSubmit)="onSubmit(userForm.value)">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="username">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password"> todo:
+    <div *ngIf="userForm.controls.password.touched && userForm.controls.password.errors"> ​​
+      <div *ngIf="userForm.controls.password.errors.required" class="alert alert-danger"> Password is required. </div> ​
+      <div *ngIf="userForm.controls.password.errors.cannotContainDollarSign" class="alert alert-danger"> Password cannot dollar sign. </div>
+    </div>
+  </div>
 
-            <div class="form-group">
-              <label for="image">User Image</label>
-              <input type="file" class="form-control" id="image" #UserImage formControlName="UserImage" (change)="onFileChange($event)">
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-
-            <p> Rating section : Component interaction</p>
-            <div>
-              <app-products></app-products>
-            </div>
-          </form>
+  <div class="form-group">
+    <label for="image">User Image</label>
+    <input type="file" class="form-control" id="image" #UserImage formControlName="userImage" (change)="onFileChange($event)">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

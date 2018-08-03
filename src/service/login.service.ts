@@ -3,9 +3,11 @@ import {CanActivate} from '@angular/router';
 
 @Injectable()
 export class LoginService {
+
   isLoggedIn = false;
 
-  login(username, password){       
+  login(username, password){    
+      debugger;   
     if(username === "jason" && password === "123")
         this.isLoggedIn = true; 
     else
@@ -15,6 +17,7 @@ export class LoginService {
   }
 
   logout(){
+      debugger;
       this.isLoggedIn = false;
       return this.isLoggedIn;
   }  

@@ -1,34 +1,39 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../../../service/login.service';
+import { AuthGuard } from '../../../service/auth-guard.service';
+import { Router } from '../../../../node_modules/@angular/router';
 
-// import { PasswordValidator } from './passwordValidator';
-// import { LoginService } from './login.service';
 
 @Component({
-    selector:'login',
+    selector: 'login',
     templateUrl: 'login.component.html',
-    providers:[LoginService]
+    providers: [LoginService, AuthGuard]
 })
-export class LoginComponent  {
+export class LoginComponent {
 
-    form: FormGroup;        
+    userForm: FormGroup;
 
-    constructor(fb: FormBuilder, private _loginService: LoginService){        
-
-        this.form = fb.group({
-            username:['',Validators.required ],
-            password:['',Validators.compose([Validators.required])]          
+    constructor(fb: FormBuilder, private _loginService: LoginService, private _router: Router) {
+        debugger;
+        this.userForm = fb.group({
+            username: ['', Validators.required],
+            password: ['', Validators.compose([Validators.required])],
+            userImage: ['']
         })
     }
 
-    login(){        
-        var result = this._loginService.login(this.form.controls['username'].value,this.form.controls['password'].value); 
+    onSubmit() {
+        debugger;
+        var result = this._loginService.login(this.userForm.controls['username'].value, this.userForm.controls['password'].value);
 
-        if(!result){
-            this.form.controls['password'].setErrors({
-                invalidLogin: true 
+        if (!result) {
+            this.userForm.controls['password'].setErrors({
+                invalidLogin: true
             });
-        }        
+        } else {
+            // imperative navigation
+            this._router.navigate(['github']);
+        }
     }
 }

@@ -20,8 +20,12 @@ import { NotFoundComponent } from 'src/app/components/not-found/not-found.compon
 import { GithubComponent } from 'src/app/components/github/github.component';
 import { routing } from 'src/app/app.routing';
 import { LoginComponent } from './components/login/login.component';
-import { ContactComponent } from './contact/contact.component';
-import { GitHubUserComponent } from './git-hub-user/git-hub-user.component';
+import { ContactComponent } from 'src/app/components/contact/contact.component';
+import { GitHubUserComponent } from 'src/app/components/git-hub-user/git-hub-user.component';
+import { AuthGuard } from '../service/auth-guard.service';
+import { LoginService } from '../service/login.service';
+import { PreventUnsavedChangesGuard } from '../service/prevent-unsaved-changes-guard.service';
+
 
 
 const appRoutes: Routes = [
@@ -58,7 +62,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     routing
   ],
-  providers: [FormsSubmit],
+  providers: [FormsSubmit, AuthGuard, LoginService, PreventUnsavedChangesGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
