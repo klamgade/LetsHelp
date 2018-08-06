@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace DataAccess
+
+namespace DataAccess.Customer
 {
     public class Customer
     {
@@ -33,5 +30,10 @@ namespace DataAccess
         public string Email { get; set; }
 
         public string Notes { get; set; }
+
+        public Boolean isSubscribedToNewsLetter { get; set; }
+
+        public MembershipType membershipType { get; set; }
+
     }
 }

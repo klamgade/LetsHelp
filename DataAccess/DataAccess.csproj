@@ -53,7 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
+    <Compile Include="Customer\Customer.cs" />
+    <Compile Include="Customer\MembershipType.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Migrations\201808060440058_initial_customer_model.cs" />
     <Compile Include="Migrations\201808060440058_initial_customer_model.Designer.cs">
@@ -62,6 +63,10 @@
     <Compile Include="Migrations\201808060446336_added_identityContext.cs" />
     <Compile Include="Migrations\201808060446336_added_identityContext.Designer.cs">
       <DependentUpon>201808060446336_added_identityContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808060458000_added_isSubscribed_In_Customer.cs" />
+    <Compile Include="Migrations\201808060458000_added_isSubscribed_In_Customer.Designer.cs">
+      <DependentUpon>201808060458000_added_isSubscribed_In_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808060446336_added_identityContext.resx">
       <DependentUpon>201808060446336_added_identityContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808060458000_added_isSubscribed_In_Customer.resx">
+      <DependentUpon>201808060458000_added_isSubscribed_In_Customer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

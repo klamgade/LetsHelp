@@ -10,6 +10,6 @@ namespace DataAccess
     {
         public DataContext(): base("DefaultConnection") {}  
 
-        public System.Data.Entity.DbSet<Customer> Customer { get; set; }
+        public System.Data.Entity.DbSet<Customer.Customer> Customer { get; set; }
     }
 }
