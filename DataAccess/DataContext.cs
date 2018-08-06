@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    class DataContext : System.Data.Entity.DbContext
+    class DataContext : Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext
     {
         public DataContext(): base("DefaultConnection") {}  
 

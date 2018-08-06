@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201808060440058_initial_customer_model.Designer.cs">
       <DependentUpon>201808060440058_initial_customer_model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808060446336_added_identityContext.cs" />
+    <Compile Include="Migrations\201808060446336_added_identityContext.Designer.cs">
+      <DependentUpon>201808060446336_added_identityContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808060440058_initial_customer_model.resx">
       <DependentUpon>201808060440058_initial_customer_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808060446336_added_identityContext.resx">
+      <DependentUpon>201808060446336_added_identityContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
