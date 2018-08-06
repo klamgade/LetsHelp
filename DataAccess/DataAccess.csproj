@@ -68,6 +68,18 @@
     <Compile Include="Migrations\201808060458000_added_isSubscribed_In_Customer.Designer.cs">
       <DependentUpon>201808060458000_added_isSubscribed_In_Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808060531447_AddMembershipType.cs" />
+    <Compile Include="Migrations\201808060531447_AddMembershipType.Designer.cs">
+      <DependentUpon>201808060531447_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808060537412_CreateMembershipType_table.cs" />
+    <Compile Include="Migrations\201808060537412_CreateMembershipType_table.Designer.cs">
+      <DependentUpon>201808060537412_CreateMembershipType_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808060540358_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\201808060540358_PopulateMembershipType.Designer.cs">
+      <DependentUpon>201808060540358_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,6 +96,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808060458000_added_isSubscribed_In_Customer.resx">
       <DependentUpon>201808060458000_added_isSubscribed_In_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808060531447_AddMembershipType.resx">
+      <DependentUpon>201808060531447_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808060537412_CreateMembershipType_table.resx">
+      <DependentUpon>201808060537412_CreateMembershipType_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808060540358_PopulateMembershipType.resx">
+      <DependentUpon>201808060540358_PopulateMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

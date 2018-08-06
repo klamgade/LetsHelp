@@ -33,7 +33,9 @@ namespace DataAccess.Customer
 
         public Boolean isSubscribedToNewsLetter { get; set; }
 
-        public MembershipType membershipType { get; set; }
+        //navigation property
+        public MembershipType MembershipType { get; set; }
 
+        public Guid MembershipTypeId { get; set; }
     }
 }
