@@ -25,6 +25,9 @@ import { GitHubUserComponent } from 'src/app/components/git-hub-user/git-hub-use
 import { AuthGuard } from '../service/auth-guard.service';
 import { LoginService } from '../service/login.service';
 import { PreventUnsavedChangesGuard } from '../service/prevent-unsaved-changes-guard.service';
+import { AngularFireModule} from 'angularfire2';
+import { AngularFirestoreModule }from 'angularfire2/firestore';
+import { UserComponent } from 'src/app/components/user/user.component';
 
 
 
@@ -33,6 +36,15 @@ const appRoutes: Routes = [
   { path:  'app-file-upload', component: FileUploadComponent },
  
 ];
+
+  var config = {
+    apiKey: "AIzaSyC3ZReVWJe3DL7pRPIJPFbDNQRfHUr4yxk",
+    authDomain: "letshelp-ef3fb.firebaseapp.com",
+    databaseURL: "https://letshelp-ef3fb.firebaseio.com",
+    projectId: "letshelp-ef3fb",
+    storageBucket: "letshelp-ef3fb.appspot.com",
+    messagingSenderId: "385888280918"
+  };
 
 @NgModule({
   declarations: [
@@ -51,10 +63,13 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     ContactComponent,
-    GitHubUserComponent
+    GitHubUserComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule,
     FormsModule,
     HttpModule,
     HttpClientModule,

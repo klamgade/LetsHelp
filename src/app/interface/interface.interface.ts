@@ -5,3 +5,8 @@ export interface GitHubUser {
     score: string;
     items: Array<{}>;
 }  
+
+export interface User {
+    name: string;
+    email: string;
+  }

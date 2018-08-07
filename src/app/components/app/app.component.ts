@@ -6,6 +6,7 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { Github } from 'src/service/github.service';
+import { AngularFirestore } from '../../../../node_modules/angularfire2/firestore';
 
 @Component({
   selector: 'app-root',
@@ -26,13 +27,13 @@ export class AppComponent implements OnInit {
     this.UserForm.get('password');
   }
 
-  constructor(private fb: FormBuilder, private formService: FormsSubmit, private _gitHubService: Github) {
+  constructor(private fb: FormBuilder, private formService: FormsSubmit, private _gitHubService: Github, private afs: AngularFirestore) {
     this.UserForm = fb.group({
       'Email': ['', Validators.required],
       'password': ['', Validators.compose([CustomValidatorsComponent.cannotContainDollarSign])],
       'UserImage': ['', Validators.required]
     });
-    console.log("password validation", );
+    console.log("angular fire store", afs);
   }
 
   ngOnInit() {
