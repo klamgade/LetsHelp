@@ -7,13 +7,13 @@ namespace DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class added_isSubscribed_In_Customer : IMigrationMetadata
+    public sealed partial class PopulateStudentAndGrade : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(added_isSubscribed_In_Customer));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateStudentAndGrade));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808060458000_added_isSubscribed_In_Customer"; }
+            get { return "201808062235466_PopulateStudentAndGrade"; }
         }
         
         string IMigrationMetadata.Source

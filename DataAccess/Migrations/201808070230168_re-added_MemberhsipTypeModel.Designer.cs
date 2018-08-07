@@ -7,13 +7,13 @@ namespace DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class initial_customer_model : IMigrationMetadata
+    public sealed partial class readded_MemberhsipTypeModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial_customer_model));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(readded_MemberhsipTypeModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808060440058_initial_customer_model"; }
+            get { return "201808070230168_re-added_MemberhsipTypeModel"; }
         }
         
         string IMigrationMetadata.Source

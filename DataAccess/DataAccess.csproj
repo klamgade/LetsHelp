@@ -56,17 +56,9 @@
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="Customer\MembershipType.cs" />
     <Compile Include="DataContext.cs" />
-    <Compile Include="Migrations\201808060440058_initial_customer_model.cs" />
-    <Compile Include="Migrations\201808060440058_initial_customer_model.Designer.cs">
-      <DependentUpon>201808060440058_initial_customer_model.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201808060446336_added_identityContext.cs" />
     <Compile Include="Migrations\201808060446336_added_identityContext.Designer.cs">
       <DependentUpon>201808060446336_added_identityContext.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201808060458000_added_isSubscribed_In_Customer.cs" />
-    <Compile Include="Migrations\201808060458000_added_isSubscribed_In_Customer.Designer.cs">
-      <DependentUpon>201808060458000_added_isSubscribed_In_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201808060531447_AddMembershipType.cs" />
     <Compile Include="Migrations\201808060531447_AddMembershipType.Designer.cs">
@@ -80,22 +72,62 @@
     <Compile Include="Migrations\201808060540358_PopulateMembershipType.Designer.cs">
       <DependentUpon>201808060540358_PopulateMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808062233594_Add_StudentAndGrade_DomainClasses.cs" />
+    <Compile Include="Migrations\201808062233594_Add_StudentAndGrade_DomainClasses.Designer.cs">
+      <DependentUpon>201808062233594_Add_StudentAndGrade_DomainClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062235466_PopulateStudentAndGrade.cs" />
+    <Compile Include="Migrations\201808062235466_PopulateStudentAndGrade.Designer.cs">
+      <DependentUpon>201808062235466_PopulateStudentAndGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062330387_populateStudent.cs" />
+    <Compile Include="Migrations\201808062330387_populateStudent.Designer.cs">
+      <DependentUpon>201808062330387_populateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062331518_insertStudentData.cs" />
+    <Compile Include="Migrations\201808062331518_insertStudentData.Designer.cs">
+      <DependentUpon>201808062331518_insertStudentData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808062342050_student_secondRecord.cs" />
+    <Compile Include="Migrations\201808062342050_student_secondRecord.Designer.cs">
+      <DependentUpon>201808062342050_student_secondRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070227267_re-added_customerModel.cs" />
+    <Compile Include="Migrations\201808070227267_re-added_customerModel.Designer.cs">
+      <DependentUpon>201808070227267_re-added_customerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070230168_re-added_MemberhsipTypeModel.cs" />
+    <Compile Include="Migrations\201808070230168_re-added_MemberhsipTypeModel.Designer.cs">
+      <DependentUpon>201808070230168_re-added_MemberhsipTypeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070235132_Add_NavigationPropAndBool_In_Customer.cs" />
+    <Compile Include="Migrations\201808070235132_Add_NavigationPropAndBool_In_Customer.Designer.cs">
+      <DependentUpon>201808070235132_Add_NavigationPropAndBool_In_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070240388_Insert_MembershipType_Data.cs" />
+    <Compile Include="Migrations\201808070240388_Insert_MembershipType_Data.Designer.cs">
+      <DependentUpon>201808070240388_Insert_MembershipType_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070245398_Insert_Customer_Data.cs" />
+    <Compile Include="Migrations\201808070245398_Insert_Customer_Data.Designer.cs">
+      <DependentUpon>201808070245398_Insert_Customer_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070250374_Insert_MoreCustomerData.cs" />
+    <Compile Include="Migrations\201808070250374_Insert_MoreCustomerData.Designer.cs">
+      <DependentUpon>201808070250374_Insert_MoreCustomerData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School\Grade.cs" />
+    <Compile Include="School\Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808060440058_initial_customer_model.resx">
-      <DependentUpon>201808060440058_initial_customer_model.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808060446336_added_identityContext.resx">
       <DependentUpon>201808060446336_added_identityContext.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808060458000_added_isSubscribed_In_Customer.resx">
-      <DependentUpon>201808060458000_added_isSubscribed_In_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808060531447_AddMembershipType.resx">
       <DependentUpon>201808060531447_AddMembershipType.cs</DependentUpon>
@@ -106,6 +138,40 @@
     <EmbeddedResource Include="Migrations\201808060540358_PopulateMembershipType.resx">
       <DependentUpon>201808060540358_PopulateMembershipType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062233594_Add_StudentAndGrade_DomainClasses.resx">
+      <DependentUpon>201808062233594_Add_StudentAndGrade_DomainClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062235466_PopulateStudentAndGrade.resx">
+      <DependentUpon>201808062235466_PopulateStudentAndGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062330387_populateStudent.resx">
+      <DependentUpon>201808062330387_populateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062331518_insertStudentData.resx">
+      <DependentUpon>201808062331518_insertStudentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808062342050_student_secondRecord.resx">
+      <DependentUpon>201808062342050_student_secondRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070227267_re-added_customerModel.resx">
+      <DependentUpon>201808070227267_re-added_customerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070230168_re-added_MemberhsipTypeModel.resx">
+      <DependentUpon>201808070230168_re-added_MemberhsipTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070235132_Add_NavigationPropAndBool_In_Customer.resx">
+      <DependentUpon>201808070235132_Add_NavigationPropAndBool_In_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070240388_Insert_MembershipType_Data.resx">
+      <DependentUpon>201808070240388_Insert_MembershipType_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070245398_Insert_Customer_Data.resx">
+      <DependentUpon>201808070245398_Insert_Customer_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070250374_Insert_MoreCustomerData.resx">
+      <DependentUpon>201808070250374_Insert_MoreCustomerData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

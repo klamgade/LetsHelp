@@ -1,41 +1,19 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccess.Customer
 {
     public class Customer
     {
-        public Guid Id { get; set; }
-
+        public int Id { get; set; }
         public string FirstName { get; set; }
+        public bool IsSubscribedToNews { get; set; }
 
-        public string LastName { get; set; }
-
-        [Required(ErrorMessage = "City required")]
-        public string City { get; set; }
-
-        [Required(ErrorMessage = "Contact person required")]
-        [DisplayName("Contact person")]
-        public string ContactPerson { get; set; }
-
-        [Required(ErrorMessage = "Telephone required")]
-        [DisplayName("Telephone")]
-        [Phone]
-        public string Phone { get; set; }
-
-        [Required(ErrorMessage = "Email required")]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        public string Notes { get; set; }
-
-        public Boolean isSubscribedToNewsLetter { get; set; }
-
-        //navigation property
+        //navaigation property
         public MembershipType MembershipType { get; set; }
-
-        public Guid MembershipTypeId { get; set; }
+        public int MembershipTypeId { get; set; }
     }
 }

@@ -3,7 +3,7 @@ namespace DataAccess.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial_customer_model : DbMigration
+    public partial class readded_customerModel : DbMigration
     {
         public override void Up()
         {
@@ -11,14 +11,8 @@ namespace DataAccess.Migrations
                 "dbo.Customers",
                 c => new
                     {
-                        Id = c.Guid(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         FirstName = c.String(),
-                        LastName = c.String(),
-                        City = c.String(nullable: false),
-                        ContactPerson = c.String(nullable: false),
-                        Phone = c.String(nullable: false),
-                        Email = c.String(nullable: false),
-                        Notes = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
