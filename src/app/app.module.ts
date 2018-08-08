@@ -28,6 +28,8 @@ import { PreventUnsavedChangesGuard } from '../service/prevent-unsaved-changes-g
 import { AngularFireModule} from 'angularfire2';
 import { AngularFirestoreModule }from 'angularfire2/firestore';
 import { UserComponent } from 'src/app/components/user/user.component';
+import { UserFormComponent } from 'src/app/components/user-form/user-form.component';
+
 
 
 
@@ -64,7 +66,8 @@ const appRoutes: Routes = [
     LoginComponent,
     ContactComponent,
     GitHubUserComponent,
-    UserComponent
+    UserComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
