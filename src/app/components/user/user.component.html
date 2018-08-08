@@ -1,5 +1,5 @@
 <h1>Users</h1>
-<button class="btn btn-primary">Add</button>
+<button class="btn btn-primary" (click)="add()">Add</button>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -14,9 +14,10 @@
       <td>{{ user.name }}</td>
       <td>{{ user.email }}</td>
       <td>
-        <a>
+        <a [routerLink]="['/add', user.id]">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
+
       </td>
       <td>
         <a>

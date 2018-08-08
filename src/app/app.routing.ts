@@ -10,6 +10,7 @@ import { AuthGuard } from '../service/auth-guard.service';
 import { ProductsComponent } from './components/products/products.component';
 import { PreventUnsavedChangesGuard } from 'src/service/prevent-unsaved-changes-guard.service';
 import { UserComponent } from './components/user/user.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
 
 
 export const routing = RouterModule.forRoot([
@@ -20,5 +21,6 @@ export const routing = RouterModule.forRoot([
   {path: 'products', component: ProductsComponent},
   {path: 'contact', component: ContactComponent,canActivate:[AuthGuard]},
   {path: 'user', component: UserComponent},
+  {path: 'add', component: UserFormComponent},
   {path: '**', component:NotFoundComponent}
 ]);
