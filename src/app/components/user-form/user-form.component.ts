@@ -49,9 +49,19 @@ export class UserFormComponent implements OnInit {
 
   submit() {
     debugger;
-    this.afs.collection('users').add({
-      name: this.user.name,
-      email: this.user.email
-    });
+    if (this.id) {
+      this.afs.doc('users/' + this.id).update({
+        name: this.user.name,
+        email: this.user.email
+      });;
+    }
+    else {
+      this.afs.collection('users').add({
+        name: this.user.name,
+        email: this.user.email
+      });
+    }
+
+    this._router.navigate(['']);
   }
 }
