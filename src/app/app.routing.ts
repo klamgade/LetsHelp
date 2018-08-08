@@ -22,5 +22,6 @@ export const routing = RouterModule.forRoot([
   {path: 'contact', component: ContactComponent,canActivate:[AuthGuard]},
   {path: 'user', component: UserComponent},
   {path: 'add', component: UserFormComponent},
+  {path: 'add/:id', component: UserFormComponent},
   {path: '**', component:NotFoundComponent}
 ]);

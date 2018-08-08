@@ -20,8 +20,7 @@ export class UserFormComponent implements OnInit {
   userDoc: AngularFirestoreDocument<User>;
   singleUser: Observable<User>;
 
-  constructor(fb: FormBuilder, private _router: Router, private _route: ActivatedRoute,
-    private afs: AngularFirestore) {
+  constructor(fb: FormBuilder, private _router: Router, private _route: ActivatedRoute, private afs: AngularFirestore) {
     this.form = fb.group({
       username: ['', Validators.required],
       email: ['', Validators.required]
@@ -29,6 +28,23 @@ export class UserFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    debugger;
+    this._route.params.subscribe(params => {
+      this.id = params["id"];
+    });
+
+    if (!this.id) {
+      this.title = "New User";
+    }
+    else {
+      this.title = "Edit User";
+      this.userDoc = this.afs.doc('users/' + this.id);
+      this.singleUser = this.userDoc.valueChanges();
+      this.singleUser.subscribe((user) => {
+        this.form.get('username').setValue(user.name);
+        this.form.get('email').setValue(user.email);
+      });
+    }
   }
 
   submit() {

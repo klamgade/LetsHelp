@@ -11,8 +11,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let user of users | async">
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
+      <td>{{ user.data.name }}</td>
+      <td>{{ user.data.email }}</td>
       <td>
         <a [routerLink]="['/add', user.id]">
           <i class="glyphicon glyphicon-edit"></i>
@@ -21,7 +21,7 @@
       </td>
       <td>
         <a>
-          <i class="glyphicon glyphicon-remove"></i>
+          <i (click)="onDelete(user.id,user.data.name)" class="glyphicon glyphicon-remove"></i>
         </a>
       </td>
     </tr>
